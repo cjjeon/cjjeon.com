@@ -39,7 +39,7 @@ export const Navbar: React.FC<INavbarProps> = (props) => {
       <div className="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between md:self-center">
         <a
           href="#"
-          className="text-lg md:text-4xl font-paris tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+          className="text-lg md:text-4xl font-paris font-bold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
         >
           CJ Jeon
         </a>
@@ -52,8 +52,8 @@ export const Navbar: React.FC<INavbarProps> = (props) => {
           </svg>
         </button>
       </div>
-      <div className={"pb-5 text-center italic hidden md:block"}>
-        I Build & Make Stuff
+      <div className={"pb-5 px-2 text-center italic hidden md:block"}>
+        Engineer, Software Developer, and a Nerd
       </div>
       <nav
         className={
