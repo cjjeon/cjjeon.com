@@ -7,7 +7,7 @@ const MainBanner: React.FC<IMainBanner> = (props) => {
   return (
     <div
       className={
-        "flex flex-col justify-center items-center rounded bg-gray-500 w-full p-10"
+        "flex flex-col justify-center items-center rounded-2xl bg-gray-300 dark-mode:bg-gray-600 w-full p-10"
       }
     >
       <Image

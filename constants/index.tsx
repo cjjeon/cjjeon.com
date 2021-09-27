@@ -2,6 +2,7 @@ import TwitterIcon from "../assets/icons/twitter";
 import InstagramIcon from "../assets/icons/instagram";
 import GithubIcon from "../assets/icons/github";
 import LinkedInIcon from "../assets/icons/linkedIn";
+import { ICard } from "../components/cards";
 
 interface INavigation {
   name: string;
@@ -46,3 +47,5 @@ export const SOCIALMEDIAS: ISocialMedia[] = [
     link: "https://twitter.com",
   },
 ];
+
+export const CARDS: ICard[] = [];
