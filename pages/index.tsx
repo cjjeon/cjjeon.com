@@ -1,12 +1,10 @@
 import { Navbar } from "../components/layout";
 import { MainBanner } from "../components/banners";
+import MainButton from "../components/buttons/MainButton";
 import { useState } from "react";
 import { CARDS } from "../constants";
-import { ICard } from "../components/cards";
 
 export default function Home() {
-  const [cards, setCards] = useState<ICard[]>(CARDS);
-
   return (
     <div className="flex w-full h-full justify-center">
       <div className="max-w-screen-lg w-full p-5">
@@ -15,20 +13,20 @@ export default function Home() {
         </div>
         <div className={""}>
           <div className={"flex justify-center"}>
-            <div
-              className={
-                "flex justify-center items-center w-1/2 h-36 text-center rounded-2xl m-5 bg-gray-300 hover:bg-gray-400"
+            <MainButton
+              title={"Projects"}
+              description={
+                "List of all the cool projects that I worked or I'm working on."
               }
-            >
-              Projects
-            </div>
-            <div
-              className={
-                "flex justify-center items-center w-1/2 h-36 text-center rounded-2xl m-5 bg-gray-300 hover:bg-gray-400"
+              link={"/projects"}
+            />
+            <MainButton
+              title={"About Me"}
+              description={
+                "Not sure why you would be interested... This is where you can read about me :D"
               }
-            >
-              About Me
-            </div>
+              link={"/about"}
+            />
           </div>
         </div>
       </div>
