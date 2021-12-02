@@ -1,35 +1,72 @@
-import { Navbar } from "../components/layout";
-import { MainBanner } from "../components/banners";
-import MainButton from "../components/buttons/MainButton";
-import { useState } from "react";
-import { CARDS } from "../constants";
+import React from "react";
+
+import MainLayout from "../components/layout/MainLayout";
+import {MainBanner} from "../components/banners";
+import Timeline from "../components/timeline/Timeline"; /*
+ Copying the template of https://www.figma.com/community/file/1014838147356550908?preview=fullscreen
+ */
+
+/*
+ Copying the template of https://www.figma.com/community/file/1014838147356550908?preview=fullscreen
+ */
 
 export default function Home() {
   return (
-    <div className="flex w-full h-full justify-center">
-      <div className="max-w-screen-lg w-full p-5">
-        <div className={"p-5"}>
-          <MainBanner />
+    <MainLayout>
+      <MainBanner />
+      <div className={"flex flex-col gap-3 mt-10"}>
+        <div>
+          <h2>HIGHLIGHTS:</h2>
         </div>
-        <div className={""}>
-          <div className={"flex justify-center"}>
-            <MainButton
-              title={"Projects"}
-              description={
-                "List of all the cool projects that I worked or I'm working on."
-              }
-              link={"/projects"}
-            />
-            <MainButton
-              title={"About Me"}
-              description={
-                "Not sure why you would be interested... This is where you can read about me :D"
-              }
-              link={"/about"}
-            />
-          </div>
+        <div>
+          <Timeline
+            timelineItems={[
+              {
+                title: "First Co-op Experience!",
+                date: "2011",
+                description: "Started working at Hydro One",
+              },
+              {
+                title: "Second Co-op Experience!",
+                date: "2013",
+                description: "Started working at SNC Lavalin",
+              },
+              {
+                title: "Graduate from UBC!",
+                date: "2015",
+                description:
+                  "Got a Bachelor&apos;s Degree on Electrical Engineering!",
+              },
+              {
+                title: "First Engineering Job After University",
+                date: "2015",
+                description: "Started working at Hydro One",
+              },
+              {
+                title: "First Experience in Startup as Software Developer",
+                date: "2017",
+                description: "Started working at Hydro One",
+              },
+              {
+                title: "Joined Commit Searching for Startups!",
+                date: "Current",
+                description: "Started working at Hydro One",
+              },
+            ]}
+          />
+        </div>
+        <div>
+          Technology I'm familiary with:
+          <div>Backend</div>
+          <div>Frontend</div>
         </div>
       </div>
-    </div>
+      <div className={"mt-10"}>
+        <h2>Check out my latest projects:</h2>
+        <div>How to create a personal blog using Next.js</div>
+        <div>3D Printing Iron Man Helmet!</div>
+        <div>Create the data you want without coding!</div>
+      </div>
+    </MainLayout>
   );
 }

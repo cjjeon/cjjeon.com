@@ -1,0 +1,35 @@
+.timeline_content {
+    background-color: gray;
+    border-radius: .25em;
+    padding: .8em;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+    margin-bottom: 1em;
+    overflow-y: hidden;
+    max-height: 3.5em;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.timeline_content:before {
+    content: '';
+    background: inherit;
+    width: 1em;
+    height: 1em;
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: 7.5em;
+    transform: rotate(45deg);
+}
+
+.timeline_content:hover {
+    max-height: 10em;
+    transition: all 1s ease;
+}
+
+
+.timeline_description {
+    margin-top: 2em;
+}
