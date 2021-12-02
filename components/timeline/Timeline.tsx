@@ -1,11 +1,61 @@
-import React from "react";
-import style from "./Timeline.module.css";
+import React, { useState } from "react";
+import Collapse from "../transition/Collapse";
 
 interface TimelineItem {
   title: string;
   date: string;
-  description: string;
+  description: React.ReactElement;
 }
+
+interface TimelineItemProps extends TimelineItem {
+  isLastItem: boolean;
+}
+
+const TimeLineItem: React.FC<TimelineItemProps> = ({
+  title,
+  date,
+  description,
+  isLastItem,
+}) => {
+  const [isDetailOpen, setIsDetailOpen] = useState<boolean>(false);
+
+  return (
+    <div className={"flex"}>
+      <div
+        className={"flex flex-col items-center w-24"}
+        style={{ minHeight: "5em" }}
+      >
+        <div
+          className={
+            "flex justify-center items-center bg-indigo-300 dark:bg-indigo-500 rounded-full p-3 h-12 w-12"
+          }
+        >
+          {date}
+        </div>
+        <div className={"flex justify-center h-full"}>
+          {!isLastItem ? (
+            <div
+              className={"border-l-4 border-dotted border-gray-500 h-full"}
+            />
+          ) : null}
+        </div>
+      </div>
+      <div
+        onMouseEnter={() => setIsDetailOpen(true)}
+        onMouseLeave={() => setIsDetailOpen(false)}
+        className={"flex flex-col ml-4 mt-1 w-full"}
+      >
+        <div />
+        <div className={"bg-indigo-300 dark:bg-indigo-500 rounded w-full p-2"}>
+          <div className={"text-lg"}>{title}</div>
+          <Collapse isOpen={isDetailOpen}>
+            <div className={"italic mt-5"}>{description}</div>
+          </Collapse>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export interface TimelineProp {
   timelineItems: TimelineItem[];
@@ -16,26 +66,13 @@ const Timeline: React.FC<TimelineProp> = ({ timelineItems }) => {
     <div>
       {timelineItems.map((timelineItem, index) => {
         return (
-          <div className={"flex relative"} key={index}>
-            <div className={"flex flex-col w-24"}>
-              <div
-                className={
-                  "flex justify-center items-center bg-gray-800 rounded-full p-3"
-                }
-              >
-                {timelineItem.date}
-              </div>
-              <div className={"flex justify-center h-full"}>
-                {index !== timelineItems.length - 1 ? (
-                  <div className={"border-l-4 border-dotted h-full"} />
-                ) : null}
-              </div>
-            </div>
-            <div className={style.timeline_content}>
-              <div className={"text-lg"}>{timelineItem.title}</div>
-              <div className={"mt-5 italic"}>{timelineItem.description}</div>
-            </div>
-          </div>
+          <TimeLineItem
+            key={index}
+            title={timelineItem.title}
+            date={timelineItem.date}
+            description={timelineItem.description}
+            isLastItem={index === timelineItems.length - 1}
+          />
         );
       })}
     </div>
