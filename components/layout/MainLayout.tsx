@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import Link from "next/link";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { useTheme } from "next-themes";
 
@@ -19,15 +19,23 @@ const MainLayout: React.FC<MainLayoutProp> = ({ children }) => {
     >
       <div className={"max-w-screen-lg w-full p-5"}>
         <div className={"flex w-full justify-between items-center"}>
-          <div>CJ Jeon</div>
+          <Link href={"/"}>
+            <div className={"cursor-pointer"}>CJ Jeon</div>
+          </Link>
           <div className={"flex gap-3"}>
-            <div className={"cursor-pointer underline uppercase"}>
-              Personal Info
-            </div>
-            <div className={"cursor-pointer underline uppercase"}>
-              Projects / Blogs
-            </div>
-            <div className={"cursor-pointer underline uppercase"}>Gears</div>
+            <Link href={"/wip"}>
+              <div className={"cursor-pointer underline uppercase"}>
+                Personal Info
+              </div>
+            </Link>
+            <Link href={"/wip"}>
+              <div className={"cursor-pointer underline uppercase"}>
+                Projects / Blogs
+              </div>
+            </Link>
+            <Link href={"/wip"}>
+              <div className={"cursor-pointer underline uppercase"}>Gears</div>
+            </Link>
             <div
               className={"cursor-pointer hover:border-purple-500"}
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

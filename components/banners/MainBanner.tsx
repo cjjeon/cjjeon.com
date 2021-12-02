@@ -32,13 +32,11 @@ const MainBanner: React.FC<IMainBanner> = (props) => {
           I currently work at Commit. And, I love working on 3D printing and
           building IoT for fun ✌.
         </div>
-        <a className={"text-blue-600 dark:text-blue-400 underline"}>
-          You wanna chat? Let&apos;s Grab Coffee Together!
-        </a>
+        <a>You wanna chat? Let&apos;s Grab Coffee Together!</a>
         <div className={"flex gap-3"}>
           <a
             className={
-              "flex items-center gap-2 bg-blue-400 dark:bg-blue-600 p-2 rounded"
+              "flex items-center gap-2 bg-blue-400 dark:bg-blue-600 p-2 rounded no-underline text-black dark:text-white"
             }
             href={"https://www.linkedin.com/in/cj-jeon/"}
             target={"_blank"}
@@ -49,7 +47,7 @@ const MainBanner: React.FC<IMainBanner> = (props) => {
           </a>
           <a
             className={
-              "flex items-center gap-2 bg-gray-400 dark:bg-gray-600 p-2 rounded"
+              "flex items-center gap-2 bg-gray-400 dark:bg-gray-600 p-2 rounded no-underline text-black dark:text-white"
             }
             href={"https://github.com/cjjeon"}
             target={"_blank"}

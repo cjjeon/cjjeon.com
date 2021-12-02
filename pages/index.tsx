@@ -1,14 +1,8 @@
 import React from "react";
 
 import MainLayout from "../components/layout/MainLayout";
-import {MainBanner} from "../components/banners";
-import Timeline from "../components/timeline/Timeline"; /*
- Copying the template of https://www.figma.com/community/file/1014838147356550908?preview=fullscreen
- */
-
-/*
- Copying the template of https://www.figma.com/community/file/1014838147356550908?preview=fullscreen
- */
+import { MainBanner } from "../components/banners";
+import Timeline from "../components/timeline/Timeline";
 
 export default function Home() {
   return (
@@ -27,7 +21,8 @@ export default function Home() {
                 description: (
                   <div className={"flex flex-col gap-2"}>
                     <div>
-                      Exciting time that I got the first engineering job at{" "}
+                      This was exciting time that I got the first engineering
+                      job at{" "}
                       <a
                         href={"https://www.hydroone.com/"}
                         target={"_blank"}
@@ -36,16 +31,20 @@ export default function Home() {
                         Hydro One
                       </a>
                       . I&apos;ve always dreamed of becoming an engineer and
-                      this was definitely a step to achieve my dream.
+                      this was definitely a step to achieve my dream. Not only
+                      that, this was the first time that I was moving away from
+                      my family and friends and go to a place that I never been
+                      before.
                     </div>
                     <div>
-                      Not only that, this was the first time that I was moving
-                      away from my family and friends and go to a place that I
-                      never been before.
+                      My work was also interesting. My work was mainly on
+                      calculating the asset conditions of Transformer and
+                      Circuit Breaker.
                     </div>
                     <div>
-                      It was definitely challenging in the beginning because I
-                      didn't know anyone back then
+                      Although I didn&apos;t have much mentorship, it was
+                      valuable time where I get to apply engineering knowledge
+                      and skills.
                     </div>
                   </div>
                 ),
@@ -53,62 +52,27 @@ export default function Home() {
               {
                 title: "Second Co-op Experience!",
                 date: "2013",
-                description: (
-                  <div>
-                    This was not only the first engineering job I ever had, I
-                    was moving away from my family and friends and go to a place
-                    that I never been before. It was definitely challenging in
-                    the beginning because I didn't know anyone back then
-                  </div>
-                ),
+                description: <div>Work In Progress......</div>,
               },
               {
                 title: "Graduate from UBC!",
                 date: "2015",
-                description: (
-                  <div>
-                    This was not only the first engineering job I ever had, I
-                    was moving away from my family and friends and go to a place
-                    that I never been before. It was definitely challenging in
-                    the beginning because I didn't know anyone back then
-                  </div>
-                ),
+                description: <div>Work In Progress......</div>,
               },
               {
                 title: "First Engineering Job After University",
                 date: "2015",
-                description: (
-                  <div>
-                    This was not only the first engineering job I ever had, I
-                    was moving away from my family and friends and go to a place
-                    that I never been before. It was definitely challenging in
-                    the beginning because I didn't know anyone back then
-                  </div>
-                ),
+                description: <div>Work In Progress......</div>,
               },
               {
                 title: "First Experience in Startup as Software Developer",
                 date: "2017",
-                description: (
-                  <div>
-                    This was not only the first engineering job I ever had, I
-                    was moving away from my family and friends and go to a place
-                    that I never been before. It was definitely challenging in
-                    the beginning because I didn't know anyone back then
-                  </div>
-                ),
+                description: <div>Work In Progress......</div>,
               },
               {
                 title: "Joined Commit Searching for Startups!",
                 date: "Now",
-                description: (
-                  <div>
-                    This was not only the first engineering job I ever had, I
-                    was moving away from my family and friends and go to a place
-                    that I never been before. It was definitely challenging in
-                    the beginning because I didn't know anyone back then
-                  </div>
-                ),
+                description: <div>Work In Progress......</div>,
               },
             ]}
           />
@@ -116,14 +80,16 @@ export default function Home() {
         <div>
           Technology I'm familiary with:
           <div>Backend</div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora,
+          vel?
           <div>Frontend</div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit,
+          officia?
         </div>
       </div>
       <div className={"mt-10"}>
         <h2>Check out my latest projects:</h2>
-        <div>How to create a personal blog using Next.js</div>
-        <div>3D Printing Iron Man Helmet!</div>
-        <div>Create the data you want without coding!</div>
+        <div>Add some card about the projects I'm working on</div>
       </div>
     </MainLayout>
   );
