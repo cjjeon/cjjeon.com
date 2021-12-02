@@ -24,33 +24,91 @@ export default function Home() {
               {
                 title: "First Co-op Experience!",
                 date: "2011",
-                description: "Started working at Hydro One",
+                description: (
+                  <div className={"flex flex-col gap-2"}>
+                    <div>
+                      Exciting time that I got the first engineering job at{" "}
+                      <a
+                        href={"https://www.hydroone.com/"}
+                        target={"_blank"}
+                        rel={"noreferrer"}
+                      >
+                        Hydro One
+                      </a>
+                      . I&apos;ve always dreamed of becoming an engineer and
+                      this was definitely a step to achieve my dream.
+                    </div>
+                    <div>
+                      Not only that, this was the first time that I was moving
+                      away from my family and friends and go to a place that I
+                      never been before.
+                    </div>
+                    <div>
+                      It was definitely challenging in the beginning because I
+                      didn't know anyone back then
+                    </div>
+                  </div>
+                ),
               },
               {
                 title: "Second Co-op Experience!",
                 date: "2013",
-                description: "Started working at SNC Lavalin",
+                description: (
+                  <div>
+                    This was not only the first engineering job I ever had, I
+                    was moving away from my family and friends and go to a place
+                    that I never been before. It was definitely challenging in
+                    the beginning because I didn't know anyone back then
+                  </div>
+                ),
               },
               {
                 title: "Graduate from UBC!",
                 date: "2015",
-                description:
-                  "Got a Bachelor&apos;s Degree on Electrical Engineering!",
+                description: (
+                  <div>
+                    This was not only the first engineering job I ever had, I
+                    was moving away from my family and friends and go to a place
+                    that I never been before. It was definitely challenging in
+                    the beginning because I didn't know anyone back then
+                  </div>
+                ),
               },
               {
                 title: "First Engineering Job After University",
                 date: "2015",
-                description: "Started working at Hydro One",
+                description: (
+                  <div>
+                    This was not only the first engineering job I ever had, I
+                    was moving away from my family and friends and go to a place
+                    that I never been before. It was definitely challenging in
+                    the beginning because I didn't know anyone back then
+                  </div>
+                ),
               },
               {
                 title: "First Experience in Startup as Software Developer",
                 date: "2017",
-                description: "Started working at Hydro One",
+                description: (
+                  <div>
+                    This was not only the first engineering job I ever had, I
+                    was moving away from my family and friends and go to a place
+                    that I never been before. It was definitely challenging in
+                    the beginning because I didn't know anyone back then
+                  </div>
+                ),
               },
               {
                 title: "Joined Commit Searching for Startups!",
-                date: "Current",
-                description: "Started working at Hydro One",
+                date: "Now",
+                description: (
+                  <div>
+                    This was not only the first engineering job I ever had, I
+                    was moving away from my family and friends and go to a place
+                    that I never been before. It was definitely challenging in
+                    the beginning because I didn't know anyone back then
+                  </div>
+                ),
               },
             ]}
           />
