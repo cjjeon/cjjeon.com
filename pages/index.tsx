@@ -21,8 +21,7 @@ export default function Home() {
                 description: (
                   <div className={"flex flex-col gap-2"}>
                     <div>
-                      This was exciting time that I got the first engineering
-                      job at{" "}
+                      I did my first engineering job at{" "}
                       <a
                         href={"https://www.hydroone.com/"}
                         target={"_blank"}
@@ -34,17 +33,15 @@ export default function Home() {
                       this was definitely a step to achieve my dream. Not only
                       that, this was the first time that I was moving away from
                       my family and friends and go to a place that I never been
-                      before.
+                      before. I was exciting but also frightening experience at
+                      the same time.
                     </div>
                     <div>
-                      My work was also interesting. My work was mainly on
-                      calculating the asset conditions of Transformer and
-                      Circuit Breaker.
-                    </div>
-                    <div>
-                      Although I didn&apos;t have much mentorship, it was
-                      valuable time where I get to apply engineering knowledge
-                      and skills.
+                      The work was mainly on calculating and displaying the
+                      asset conditions of transformers and circuit breakers in
+                      substations. This gave me chance to, extract the data from
+                      different sources (SAP, Database, Excel, etc), write
+                      algorithm in VBA, and plot output using ArcGIS.
                     </div>
                   </div>
                 ),

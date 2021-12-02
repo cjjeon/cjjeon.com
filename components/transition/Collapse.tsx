@@ -11,7 +11,7 @@ const Collapse: React.FC<CollapseProp> = ({ isOpen, children, className }) => {
 
   useEffect(() => {
     if (childRef && childRef.current) {
-      setChildHeight(childRef.current.offsetHeight);
+      setChildHeight(childRef.current.scrollHeight + 24);
     }
   }, [childRef]);
 
