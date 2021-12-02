@@ -49,7 +49,33 @@ export default function Home() {
               {
                 title: "Second Co-op Experience!",
                 date: "2013",
-                description: <div>Work In Progress......</div>,
+                description: (
+                  <div className={"flex flex-col gap-2"}>
+                    <div>
+                      Between my 3rd and 4th year, I got a chance to work at{" "}
+                      <a
+                        href={"https://www.snclavalin.com/en"}
+                        target={"_blank"}
+                        rel="noreferrer"
+                      >
+                        SNC Lavalin
+                      </a>
+                      . Also, this was the time when I first met my wife 😛.
+                    </div>
+                    <div>
+                      Luckily, I was able to work at different department
+                      instead of stuck in engineering. I worked as a Cost
+                      Controller who overseeing budgets, a Project Controller
+                      that manages entire project from start to end, and a SCADA
+                      engineer how communication devices are setup in
+                      substation.
+                    </div>
+                    <div>
+                      This was great experience as I get to work outside of
+                      engineering.
+                    </div>
+                  </div>
+                ),
               },
               {
                 title: "Graduate from UBC!",
