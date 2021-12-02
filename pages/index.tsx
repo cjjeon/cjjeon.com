@@ -75,7 +75,7 @@ export default function Home() {
           />
         </div>
         <div>
-          Technology I'm familiary with:
+          Technology I&apos;m familiary with:
           <div>Backend</div>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora,
           vel?
@@ -86,7 +86,7 @@ export default function Home() {
       </div>
       <div className={"mt-10"}>
         <h2>Check out my latest projects:</h2>
-        <div>Add some card about the projects I'm working on</div>
+        <div>Add some card about the projects I&apos;m working on</div>
       </div>
     </MainLayout>
   );
