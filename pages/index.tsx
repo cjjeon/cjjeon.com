@@ -3,6 +3,8 @@ import React from "react";
 import MainLayout from "../components/layout/MainLayout";
 import { MainBanner } from "../components/banners";
 import Timeline from "../components/timeline/Timeline";
+import SkillCards from "../components/cards/SkillCards";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -182,21 +184,18 @@ export default function Home() {
           <h2>SPECIALIZATION:</h2>
           <div className={"flex flex-col justify-center items-center"}>
             <div className={"flex"}>
-              <div></div>
+              <div>
+                <SkillCards
+                  icon={faCode}
+                  title={"Backend"}
+                  rating={4}
+                  tags={["Python", "Go", "Node"]}
+                />
+              </div>
             </div>
-            <div className={"underline"}>Backend</div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora,
-            vel?
-            <div className={"underline"}>Frontend</div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit,
-            officia?
           </div>
         </div>
       </div>
-      {/*<div className={"mt-10"}>*/}
-      {/*  <h2>Check out my latest projects:</h2>*/}
-      {/*  <div>Add some card about the projects I&apos;m working on</div>*/}
-      {/*</div>*/}
     </MainLayout>
   );
 }
