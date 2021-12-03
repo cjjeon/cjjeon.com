@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 80",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -13,19 +13,21 @@
     "@fortawesome/free-brands-svg-icons": "5.15.4",
     "@fortawesome/free-solid-svg-icons": "5.15.4",
     "@fortawesome/react-fontawesome": "0.1.16",
-    "next": "11.1.0",
+    "next": "12.0.2",
     "next-themes": "0.0.15",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/react": "17.0.19",
-    "autoprefixer": "^9.8.8",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.0",
-    "postcss": "^7.0.39",
-    "prettier": "2.3.2",
+    "@types/node": "16.11.6",
+    "@types/react": "17.0.34",
+    "eslint": "7",
+    "eslint-config-next": "12.0.2",
+    "typescript": "4.4.4",
+    "postcss-preset-env": "6.7.0",
+    "autoprefixer": "10.4.0",
+    "postcss": "8.3.11",
     "tailwindcss": "2.2.19",
-    "typescript": "4.3.5"
+    "prettier": "2.4.1"
   }
 }
