@@ -43,13 +43,19 @@ const TimeLineItem: React.FC<TimelineItemProps> = ({
       <div
         onMouseEnter={() => setIsDetailOpen(true)}
         onMouseLeave={() => setIsDetailOpen(false)}
-        className={"flex flex-col ml-4 mt-1 mb-3 w-full"}
+        className={"flex flex-col ml-4 mt-1 mb-3 w-full relative"}
       >
-        <div />
-        <div className={"bg-indigo-300 dark:bg-indigo-500 rounded w-full p-2"}>
-          <h3>{title}</h3>
+        <div
+          className={
+            "w-4 h-4 transform rotate-45 bg-indigo-300 dark:bg-indigo-500 absolute -left-2 top-3"
+          }
+        />
+        <div className={"bg-indigo-300 dark:bg-indigo-500 rounded w-full p-3"}>
+          <h3 className={"uppercase text-blue-600 dark:text-blue-200"}>
+            {title}
+          </h3>
           <Collapse isOpen={isDetailOpen}>
-            <div className={"italic mt-5"}>{description}</div>
+            <div className={"mt-5"}>{description}</div>
           </Collapse>
         </div>
       </div>
