@@ -182,32 +182,30 @@ export default function Home() {
                 </div>
                 <div>
                     <h2>SPECIALIZATION:</h2>
-                    <div className={"flex flex-col justify-center items-center"}>
-                        <div className={"flex gap-5"}>
-                            <div>
-                                <SkillCards
-                                    icon={faCode}
-                                    title={"Backend"}
-                                    rating={4}
-                                    tags={["Python", "Go", "Node"]}
-                                />
-                            </div>
-                            <div>
-                                <SkillCards
-                                    icon={faLaptop}
-                                    title={"Frontend"}
-                                    rating={4}
-                                    tags={["React", "Typescript", "Vue"]}
-                                />
-                            </div>
-                            <div>
-                                <SkillCards
-                                    icon={faNetworkWired}
-                                    title={"DevOps"}
-                                    rating={3}
-                                    tags={["AWS", "Microservices", "Docker"]}
-                                />
-                            </div>
+                    <div className={"flex flex-col md:flex-row justify-center items-center gap-5"}>
+                        <div>
+                            <SkillCards
+                                icon={faCode}
+                                title={"Backend"}
+                                rating={4}
+                                tags={["Python", "Go", "Node"]}
+                            />
+                        </div>
+                        <div>
+                            <SkillCards
+                                icon={faLaptop}
+                                title={"Frontend"}
+                                rating={4}
+                                tags={["React", "Typescript", "Vue"]}
+                            />
+                        </div>
+                        <div>
+                            <SkillCards
+                                icon={faNetworkWired}
+                                title={"DevOps"}
+                                rating={3}
+                                tags={["AWS", "Microservices", "Docker"]}
+                            />
                         </div>
                     </div>
                 </div>
