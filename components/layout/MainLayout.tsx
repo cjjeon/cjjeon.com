@@ -2,17 +2,23 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import {faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
 import {useTheme} from "next-themes";
+import {useEffect, useState} from "react";
+import {IconDefinition} from "@fortawesome/free-brands-svg-icons";
 
 export interface MainLayoutProp {
 }
 
 const MainLayout: React.FC<MainLayoutProp> = ({children}) => {
+    const [backgroundCss, setBackgroundCss] = useState<string>('from-gray-100 to-gray-400')
+    const [icon, setIcon] = useState<IconDefinition>(faSun)
     const {theme, setTheme} = useTheme();
 
-    const backgroundCss =
-        theme === "dark"
+    useEffect(() => {
+        setBackgroundCss(theme === "dark"
             ? "from-gray-600 to-gray-800"
-            : "from-gray-100 to-gray-400";
+            : "from-gray-100 to-gray-400")
+        setIcon(theme === "dark" ? faSun : faMoon)
+    }, [theme])
 
     return (
         <div
@@ -42,7 +48,7 @@ const MainLayout: React.FC<MainLayoutProp> = ({children}) => {
                             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                         >
                             <FontAwesomeIcon
-                                icon={theme === "dark" ? faSun : faMoon}
+                                icon={icon}
                                 size={"lg"}
                             />
                         </div>
