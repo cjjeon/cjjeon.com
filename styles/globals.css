@@ -19,3 +19,8 @@
         @apply text-blue-600 dark:text-blue-200 underline;
     }
 }
+
+.hidden_context {
+    display: inline-block;
+    mask: linear-gradient(#fff, transparent 50px);
+}
