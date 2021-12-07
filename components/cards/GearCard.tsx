@@ -10,7 +10,11 @@ interface GearCardProps {
 const GearCard: React.FC<GearCardProps> = ({ imageSrc, title, detail }) => {
     return (
         <div className={'flex flex-col md:flex-row rounded-lg border-2'}>
-            <div className={'flex justify-center items-center bg-white rounded-t-lg md:rounded-t-none md:rounded-l-lg'}>
+            <div
+                className={
+                    'flex justify-center items-center bg-white dark:bg-gray-500 rounded-t-lg md:rounded-t-none md:rounded-l-lg'
+                }
+            >
                 <div className={'w-60 md:w-44 p-5'}>
                     <Image
                         className={'rounded-t-lg md:rounded-l-lg md:rounded-t-none'}
