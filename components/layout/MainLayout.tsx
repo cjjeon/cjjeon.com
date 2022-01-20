@@ -1,52 +1,40 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
-import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
+import {Collapse} from "../transition";
+import {ROUTES} from "../../constants/routers";
+import {useRouter} from "next/router";
 
-export interface MainLayoutProp {}
 
-const MainLayout: React.FC<MainLayoutProp> = ({ children }) => {
-    const [backgroundCss, setBackgroundCss] = useState<string>('from-gray-100 to-gray-400');
-    const [icon, setIcon] = useState<IconDefinition>(faSun);
-    const { theme, setTheme } = useTheme();
-
-    useEffect(() => {
-        setBackgroundCss(theme === 'dark' ? 'from-gray-600 to-gray-800' : 'from-gray-100 to-gray-400');
-        setIcon(theme === 'dark' ? faSun : faMoon);
-    }, [theme]);
+const MainLayout: React.FC = ({children}) => {
+    const router = useRouter()
 
     return (
-        <div className={`flex justify-center min-h-screen min-w-screen bg-gradient-to-r ${backgroundCss}`}>
-            <div className={'max-w-screen-lg w-full p-5'}>
-                <div className={'flex w-full justify-between items-center'}>
-                    <Link href={'/'}>
-                        <div className={'cursor-pointer'}>CJ Jeon</div>
-                    </Link>
+        <div className={'flex flex-col'}>
+            <div className={'absolute top-0 w-full bg-black'}>
+                <div className={'flex justify-between items-center px-5 py-2'}>
+                    <a href={'/'} className={'text-white no-underline'}>
+                        CJ Jeon
+                    </a>
                     <div className={'flex gap-3'}>
-                        {/*<Link href={"/wip"}>*/}
-                        {/*    <div className={"cursor-pointer underline uppercase"}>*/}
-                        {/*        Personal Info*/}
-                        {/*    </div>*/}
-                        {/*</Link>*/}
-                        {/*<Link href={"/wip"}>*/}
-                        {/*    <div className={"cursor-pointer underline uppercase"}>*/}
-                        {/*        Projects / Blogs*/}
-                        {/*    </div>*/}
-                        {/*</Link>*/}
-                        <Link href={'/gears'}>
-                            <div className={'cursor-pointer underline uppercase'}>Gears</div>
-                        </Link>
-                        <div
-                            className={'cursor-pointer hover:border-purple-500'}
-                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                        >
-                            <FontAwesomeIcon icon={icon} size={'lg'} />
-                        </div>
+                        {ROUTES.map((route, index) => {
+                            return <a href={route.path} key={index}
+                                      className={`${router.asPath === route.path ? 'text-purple-400' : 'text-white'} no-underline`}>
+                                {route.title}
+                            </a>
+                        })}
                     </div>
                 </div>
-                {children}
+            </div>
+            <div className={'w-full h-full bg-cool-picture bg-center bg-cover bg-no-repeat'}>
+                <div className={`flex justify-center items-center h-screen`}>
+                    <div
+                        className={'max-w-md md:max-w-2xl lg:max-w-4xl mt-12'}>
+                        <Collapse isOpen={true}
+                                  className={'border-2 border-white rounded-2xl backdrop-blur-sm bg-black/40'}>
+                            <div className={'overflow-y-scroll p-5 max-h-[90vh]'}>
+                                {children}
+                            </div>
+                        </Collapse>
+                    </div>
+                </div>
             </div>
         </div>
     );

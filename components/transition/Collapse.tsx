@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 export interface CollapseProp {
     isOpen: boolean;
@@ -6,7 +6,7 @@ export interface CollapseProp {
     minHeight?: number;
 }
 
-const Collapse: React.FC<CollapseProp> = ({ isOpen, minHeight = 0, children, className }) => {
+const Collapse: React.FC<CollapseProp> = ({isOpen, minHeight = 0, children, className}) => {
     const [childHeight, setChildHeight] = useState<number>(0);
     const childRef = useRef<HTMLDivElement>(null);
 
@@ -20,12 +20,12 @@ const Collapse: React.FC<CollapseProp> = ({ isOpen, minHeight = 0, children, cla
         <div
             className={className}
             style={{
-                overflow: isOpen ? 'auto' : 'hidden',
-                transition: '0.8s max-height',
+                overflow: 'hidden',
+                transition: '1.2s max-height',
                 maxHeight: isOpen ? childHeight : minHeight,
             }}
         >
-            <div ref={childRef} className={'overflow-visible'}>
+            <div ref={childRef}>
                 {children}
             </div>
         </div>

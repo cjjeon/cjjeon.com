@@ -1,21 +1,14 @@
 module.exports = {
-    purge: {
-        enabled: true,
-        content: [
-            "./pages/**/*.{js,ts,jsx,tsx}",
-            "./components/**/*.{js,ts,jsx,tsx}",
-        ],
-        options: {
-            safelist: ["dark"],
-        },
-    },
-    darkMode: "class", // or 'media' or 'class'
+    content: [
+        "./pages/**/*.{js,ts,jsx,tsx}",
+        "./components/**/*.{js,ts,jsx,tsx}",
+    ],
     theme: {
         extend: {
-            fontFamily: {
-                paris: ["Parisienne", "cursive"],
-            },
-        },
+            backgroundImage: {
+                'cool-picture': "url('/background-image.jpg')",
+            }
+        }
     },
     variants: {
         extend: {},

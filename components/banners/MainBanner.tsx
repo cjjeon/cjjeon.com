@@ -10,24 +10,24 @@ const MainBanner: React.FC<IMainBanner> = (props) => {
     return (
         <div
             className={
-                "flex flex-col md:flex-row w-full justify-between items-center p-5"
+                "flex flex-col justify-center items-center p-5"
             }
         >
-            <div className={"flex w-full md:w-1/2 justify-center items-center"}>
+            <div className={"flex justify-center items-center"}>
                 <Image
                     className={"rounded rounded-full"}
                     src="/profile_picture.jpg"
                     alt={"profile_picture"}
-                    width={64 * 4}
-                    height={64 * 4}
+                    width={64 * 3}
+                    height={64 * 3}
                 />
             </div>
             <div
                 className={
-                    "flex flex-col w-full md:w-1/2 gap-5 text-center items-center py-5 md:items-start md:text-left md:py-0"
+                    "flex flex-col w-full lg:w-1/2 gap-5 text-center items-center py-5"
                 }
             >
-                <div className={"text-4xl"}>Hello! My Name is CJ.</div>
+                <h1>Hello! My Name is CJ.</h1>
                 <div>
                     I&apos;m a full-stack engineer who likes to build and solve problems!
                     I currently work at Commit. And, I love working on 3D printing and
@@ -39,7 +39,7 @@ const MainBanner: React.FC<IMainBanner> = (props) => {
                 <div className={"flex gap-3"}>
                     <a
                         className={
-                            "flex items-center gap-2 bg-blue-400 dark:bg-blue-600 p-2 rounded no-underline text-black dark:text-white"
+                            "flex items-center gap-2 bg-blue-600 p-2 rounded no-underline text-black dark:text-white"
                         }
                         href={"https://www.linkedin.com/in/cj-jeon/"}
                         target={"_blank"}
@@ -50,7 +50,7 @@ const MainBanner: React.FC<IMainBanner> = (props) => {
                     </a>
                     <a
                         className={
-                            "flex items-center gap-2 bg-gray-400 dark:bg-gray-600 p-2 rounded no-underline text-black dark:text-white"
+                            "flex items-center gap-2 bg-gray-400 p-2 rounded no-underline text-black dark:text-white"
                         }
                         href={"https://github.com/cjjeon"}
                         target={"_blank"}
