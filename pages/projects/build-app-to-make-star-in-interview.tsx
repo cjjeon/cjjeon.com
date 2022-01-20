@@ -19,7 +19,7 @@ const BuildAppToMakeStarInInterview = () => {
                         <div className={'mt-4 flex flex-col gap-3'}>
                             <p>
                                 Before reading this article, you can check out the app <a
-                                href={'https://interview.cjjeon.com'} target={"_blank"}>here!</a>
+                                href={'https://interview.cjjeon.com'} target={"_blank"} rel={"noreferrer"}>here!</a>
                             </p>
                             <p>
                                 Hi! I&apos;m an engineer who loves creating and building something that helps others.
